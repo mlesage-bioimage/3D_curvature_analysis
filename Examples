@@ -1,0 +1,55 @@
+"""
+Example configuration for embryo developmental stages
+Copy this to src/config.py for your analysis
+"""
+
+INPUT_FOLDER = r"/path/to/embryo/images"
+OUTPUT_EXCEL = r"/path/to/embryo/results.xlsx"
+
+GROUPS_ORDERED = ["zygote", "2cells", "4cells", "8cells", "16cells", "32cells", "blastocyst"]
+
+GROUP_PATTERNS = {
+    "zygote": ["zygote"],
+    "2cells": ["2cells"],
+    "4cells": ["4cells"],
+    "8cells": ["8cells"],
+    "16cells": ["16cells"],
+    "32cells": ["32cells"],
+    "blastocyst": ["blasto"],
+}
+
+ORIGINAL_SPACING = (0.258, 0.258, 1.0)
+CURVATURE_RADIUS = 1.0
+USE_PARALLEL = True
+MAX_WORKERS = 2
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+"""
+Example configuration for drug treatment comparison
+Copy this to src/config.py for your analysis
+"""
+
+INPUT_FOLDER = r"/path/to/treatment/images"
+OUTPUT_EXCEL = r"/path/to/treatment/results.xlsx"
+
+GROUPS_ORDERED = ["Control", "LowDose", "HighDose"]
+
+GROUP_PATTERNS = {
+    "Control": ["control", "DMSO", "vehicle"],
+    "LowDose": ["low", "10uM"],
+    "HighDose": ["high", "50uM", "100uM"],
+}
+
+ORIGINAL_SPACING = (0.258, 0.258, 1.0)
+CURVATURE_RADIUS = 1.0
+USE_PARALLEL = True
+MAX_WORKERS = 2
+
+
+
+
+------------------------------------------------------------------------------------------------
